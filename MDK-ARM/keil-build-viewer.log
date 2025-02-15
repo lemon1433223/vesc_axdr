@@ -1,0 +1,304 @@
+
+=================================================== keil-build-viewer v1.6 ==================================================
+ 
+[Search keil project] 1 item(s)
+	D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM\G474RET6_Demo.uvprojx
+
+[User input] 
+[Current folder] D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM
+[Encoding] 936
+[Keil project path] D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM\G474RET6_Demo.uvprojx
+[Keil project name] G474RET6_Demo.uvprojx
+[Is keil v4] 0
+[target name] G474RET6_Demo
+[final target name] G474RET6_Demo
+
+[Device] STM32G474RETx
+[Target name] 
+[Output name] G474RET6_Demo
+[Output path] .\
+[Listing path] .\
+[Is has pack] 1
+[Is enbale LTO] 0
+[Is has user library] 1
+[Is custom scatter file] 0
+
+[G474RET6_Demo.uvprojx]  [G474RET6_Demo]  [STM32G474RETx]  [LTO disable]
+ 
+[memory info]
+[name] IRAM [base addr] 0x20000000 [size] 0x00020000 [type] 1 [off-chip] 0 [is pack] 1 [ID] 2 
+[name] IROM [base addr] 0x08000000 [size] 0x00080000 [type] 2 [off-chip] 0 [is pack] 1 [ID] 3 
+
+
+[map file path] D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM\G474RET6_Demo.map
+
+[region info]
+[load region] LR_IROM1
+	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x0001923C [memory type] 2 [memory ID] 3
+
+	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x00011240 [memory type] 1 [memory ID] 2
+		[ZI block] addr: 0x2000531C, size: 0x0000BF24 (48932)
+
+
+[object name max length] 29
+[object path max length] 72
+
+[object in map file]
+[object name] adc.o                          [path] ../Core/Src/adc.c
+[object name] app_freertos.o                 [path] ../Core/Src/app_freertos.c
+[object name] bms.o                          [path] ..\driver\bms.c
+[object name] buffer.o                       [path] ..\util\buffer.c
+[object name] cmsis_os2.o                    [path] ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
+[object name] comm_usb.o                     [path] ..\comm\comm_usb.c
+[object name] conf_general.o                 [path] ..\conf_custom\conf_general.c
+[object name] confgenerator.o                [path] ..\conf_custom\confgenerator.c
+[object name] crc.o                          [path] ..\util\crc.c
+[object name] dma.o                          [path] ../Core/Src/dma.c
+[object name] eeprom_emul.o                  [path] ..\driver\EEPROM_Emul\eeprom_emul.c
+[object name] enc_mt6816.o                   [path] ..\encoder\enc_mt6816.c
+[object name] encoder.o                      [path] ..\encoder\encoder.c
+[object name] encoder_cfg.o                  [path] ..\encoder\encoder_cfg.c
+[object name] event_groups.o                 [path] ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+[object name] flash_interface.o              [path] ..\driver\EEPROM_Emul\flash_interface.c
+[object name] foc_math.o                     [path] ..\motor\foc_math.c
+[object name] gpio.o                         [path] ../Core/Src/gpio.c
+[object name] heap_4.o                       [path] ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+[object name] hw_custom.o                    [path] ..\hwconf\hw_custom.c
+[object name] list.o                         [path] ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+[object name] main.o                         [path] ../Core/Src/main.c
+[object name] mc_interface.o                 [path] ..\motor\mc_interface.c
+[object name] mcpwm.o                        [path] ..\motor\mcpwm.c
+[object name] mcpwm_foc.o                    [path] ..\motor\mcpwm_foc.c
+[object name] mempools.o                     [path] ..\util\mempools.c
+[object name] packet.o                       [path] ..\comm\packet.c
+[object name] port.o                         [path] ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+[object name] queue.o                        [path] ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+[object name] spi.o                          [path] ../Core/Src/spi.c
+[object name] startup_stm32g474xx.o          [path] startup_stm32g474xx.s
+[object name] stm32g4xx_hal.o                [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
+[object name] stm32g4xx_hal_adc.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
+[object name] stm32g4xx_hal_adc_ex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
+[object name] stm32g4xx_hal_cortex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
+[object name] stm32g4xx_hal_dma.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
+[object name] stm32g4xx_hal_flash.o          [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
+[object name] stm32g4xx_hal_flash_ex.o       [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
+[object name] stm32g4xx_hal_gpio.o           [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
+[object name] stm32g4xx_hal_msp.o            [path] ../Core/Src/stm32g4xx_hal_msp.c
+[object name] stm32g4xx_hal_pcd.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c
+[object name] stm32g4xx_hal_pcd_ex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c
+[object name] stm32g4xx_hal_pwr_ex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
+[object name] stm32g4xx_hal_rcc.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
+[object name] stm32g4xx_hal_rcc_ex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
+[object name] stm32g4xx_hal_spi.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c
+[object name] stm32g4xx_hal_tim.o            [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
+[object name] stm32g4xx_hal_tim_ex.o         [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
+[object name] stm32g4xx_hal_timebase_tim.o   [path] ../Core/Src/stm32g4xx_hal_timebase_tim.c
+[object name] stm32g4xx_hal_uart.o           [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
+[object name] stm32g4xx_hal_uart_ex.o        [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
+[object name] stm32g4xx_it.o                 [path] ../Core/Src/stm32g4xx_it.c
+[object name] stm32g4xx_ll_usb.o             [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c
+[object name] stream_buffer.o                [path] ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+[object name] system_stm32g4xx.o             [path] ../Core/Src/system_stm32g4xx.c
+[object name] tasks.o                        [path] ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+[object name] terminal.o                     [path] ..\comm\terminal.c
+[object name] tim.o                          [path] ../Core/Src/tim.c
+[object name] timer.o                        [path] ..\driver\timer.c
+[object name] timers.o                       [path] ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
+[object name] usart.o                        [path] ../Core/Src/usart.c
+[object name] usart_vofa.o                   [path] ..\comm\usart_vofa.c
+[object name] usb_device.o                   [path] ../USB_Device/App/usb_device.c
+[object name] usbd_cdc.o                     [path] ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+[object name] usbd_cdc_if.o                  [path] ../USB_Device/App/usbd_cdc_if.c
+[object name] usbd_conf.o                    [path] ../USB_Device/Target/usbd_conf.c
+[object name] usbd_core.o                    [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+[object name] usbd_ctlreq.o                  [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+[object name] usbd_desc.o                    [path] ../USB_Device/App/usbd_desc.c
+[object name] usbd_ioreq.o                   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+[object name] utils_math.o                   [path] ..\util\utils_math.c
+[object name] utils_sys.o                    [path] ..\util\utils_sys.c
+
+[file path in keil project]
+[old name] startup_stm32g474xx.s          [type] 1   [path] startup_stm32g474xx.s
+[old name] main.c                         [type] 1   [path] ../Core/Src/main.c
+[old name] gpio.c                         [type] 1   [path] ../Core/Src/gpio.c
+[old name] app_freertos.c                 [type] 1   [path] ../Core/Src/app_freertos.c
+[old name] adc.c                          [type] 1   [path] ../Core/Src/adc.c
+[old name] dma.c                          [type] 1   [path] ../Core/Src/dma.c
+[old name] spi.c                          [type] 1   [path] ../Core/Src/spi.c
+[old name] tim.c                          [type] 1   [path] ../Core/Src/tim.c
+[old name] usart.c                        [type] 1   [path] ../Core/Src/usart.c
+[old name] stm32g4xx_it.c                 [type] 1   [path] ../Core/Src/stm32g4xx_it.c
+[old name] stm32g4xx_hal_msp.c            [type] 1   [path] ../Core/Src/stm32g4xx_hal_msp.c
+[old name] stm32g4xx_hal_timebase_tim.c   [type] 1   [path] ../Core/Src/stm32g4xx_hal_timebase_tim.c
+[old name] usbd_conf.c                    [type] 1   [path] ../USB_Device/Target/usbd_conf.c
+[old name] usb_device.c                   [type] 1   [path] ../USB_Device/App/usb_device.c
+[old name] usbd_desc.c                    [type] 1   [path] ../USB_Device/App/usbd_desc.c
+[old name] usbd_cdc_if.c                  [type] 1   [path] ../USB_Device/App/usbd_cdc_if.c
+[old name] stm32g4xx_ll_utils.c           [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c
+[old name] stm32g4xx_ll_exti.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c
+[old name] stm32g4xx_ll_gpio.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c
+[old name] stm32g4xx_hal_pcd.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c
+[old name] stm32g4xx_hal_pcd_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c
+[old name] stm32g4xx_ll_usb.c             [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c
+[old name] stm32g4xx_hal.c                [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
+[old name] stm32g4xx_hal_rcc.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
+[old name] stm32g4xx_hal_rcc_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
+[old name] stm32g4xx_hal_flash.c          [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
+[old name] stm32g4xx_hal_flash_ex.c       [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
+[old name] stm32g4xx_hal_flash_ramfunc.c  [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c
+[old name] stm32g4xx_hal_gpio.c           [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
+[old name] stm32g4xx_hal_exti.c           [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c
+[old name] stm32g4xx_hal_dma.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
+[old name] stm32g4xx_hal_dma_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c
+[old name] stm32g4xx_hal_pwr.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c
+[old name] stm32g4xx_hal_pwr_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
+[old name] stm32g4xx_hal_cortex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
+[old name] stm32g4xx_ll_pwr.c             [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c
+[old name] stm32g4xx_hal_adc.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
+[old name] stm32g4xx_hal_adc_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
+[old name] stm32g4xx_ll_adc.c             [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c
+[old name] stm32g4xx_hal_spi.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c
+[old name] stm32g4xx_hal_spi_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c
+[old name] stm32g4xx_hal_tim.c            [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
+[old name] stm32g4xx_hal_tim_ex.c         [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
+[old name] stm32g4xx_hal_uart.c           [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
+[old name] stm32g4xx_hal_uart_ex.c        [type] 1   [path] ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
+[old name] system_stm32g4xx.c             [type] 1   [path] ../Core/Src/system_stm32g4xx.c
+[old name] usbd_core.c                    [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c
+[old name] usbd_ctlreq.c                  [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c
+[old name] usbd_ioreq.c                   [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c
+[old name] usbd_cdc.c                     [type] 1   [path] ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c
+[old name] mcpwm_foc.c                    [type] 1   [path] ..\motor\mcpwm_foc.c
+[old name] foc_math.c                     [type] 1   [path] ..\motor\foc_math.c
+[old name] mc_interface.c                 [type] 1   [path] ..\motor\mc_interface.c
+[old name] mcpwm.c                        [type] 1   [path] ..\motor\mcpwm.c
+[old name] enc_mt6816.c                   [type] 1   [path] ..\encoder\enc_mt6816.c
+[old name] encoder.c                      [type] 1   [path] ..\encoder\encoder.c
+[old name] encoder_cfg.c                  [type] 1   [path] ..\encoder\encoder_cfg.c
+[old name] hw_custom.c                    [type] 1   [path] ..\hwconf\hw_custom.c
+[old name] buffer.c                       [type] 1   [path] ..\util\buffer.c
+[old name] utils_math.c                   [type] 1   [path] ..\util\utils_math.c
+[old name] mempools.c                     [type] 1   [path] ..\util\mempools.c
+[old name] crc.c                          [type] 1   [path] ..\util\crc.c
+[old name] utils_sys.c                    [type] 1   [path] ..\util\utils_sys.c
+[old name] digital_filter.c               [type] 1   [path] ..\util\digital_filter.c
+[old name] usart_vofa.c                   [type] 1   [path] ..\comm\usart_vofa.c
+[old name] packet.c                       [type] 1   [path] ..\comm\packet.c
+[old name] terminal.c                     [type] 1   [path] ..\comm\terminal.c
+[old name] commands.c                     [type] 1   [path] ..\comm\commands.c
+[old name] comm_usb.c                     [type] 1   [path] ..\comm\comm_usb.c
+[old name] timer.c                        [type] 1   [path] ..\driver\timer.c
+[old name] spi_bb.c                       [type] 1   [path] ..\driver\spi_bb.c
+[old name] eeprom_emul.c                  [type] 1   [path] ..\driver\EEPROM_Emul\eeprom_emul.c
+[old name] flash_interface.c              [type] 1   [path] ..\driver\EEPROM_Emul\flash_interface.c
+[old name] bms.c                          [type] 1   [path] ..\driver\bms.c
+[old name] conf_custom.c                  [type] 1   [path] ..\conf_custom\conf_custom.c
+[old name] confgenerator.c                [type] 1   [path] ..\conf_custom\confgenerator.c
+[old name] conf_general.c                 [type] 1   [path] ..\conf_custom\conf_general.c
+[old name] croutine.c                     [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+[old name] event_groups.c                 [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+[old name] list.c                         [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+[old name] queue.c                        [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+[old name] stream_buffer.c                [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+[old name] tasks.c                        [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+[old name] timers.c                       [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
+[old name] cmsis_os2.c                    [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
+[old name] heap_4.c                       [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+[old name] port.c                         [type] 1   [path] ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
+[old name] arm_cortexM4lf_math.lib        [type] 3   [path] ../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib
+
+[record region info]
+[load region] LR_IROM1
+	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x00017130 [type] 2 [ID] 3
+	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x00010838 [type] 1 [ID] 2
+------------------------------------------------------------------------------------------------------------------------------------
+                                   FILE(s)                                   |         RAM (byte)       |       FLASH (byte)       |
+------------------------------------------------------------------------------------------------------------------------------------
+../Core/Src/adc.c():                                                         |         316              |         988              |
+../Core/Src/app_freertos.c():                                                |         532              |         862              |
+..\driver\bms.c():                                                           |         780              |         188              |
+..\util\buffer.c():                                                          |           0  [NEW]       |         242  [NEW]       |
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1234  [+6]        |
+..\comm\comm_usb.c():                                                        |          16              |          16              |
+..\conf_custom\conf_general.c():                                             |        3422              |        9488              |
+..\conf_custom\confgenerator.c():                                            |           0              |        1484              |
+..\util\crc.c():                                                             |           0              |         556              |
+../Core/Src/dma.c():                                                         |           0              |          92              |
+..\driver\EEPROM_Emul\eeprom_emul.c():                                       |          12              |        5554              |
+..\encoder\enc_mt6816.c():                                                   |           0              |         308              |
+..\encoder\encoder.c():                                                      |          24              |         575  [+104]      |
+..\encoder\encoder_cfg.c():                                                  |         184              |          52              |
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c():                 |           0              |           0              |
+..\driver\EEPROM_Emul\flash_interface.c():                                   |           0              |         416              |
+..\motor\foc_math.c():                                                       |           0              |        3708              |
+../Core/Src/gpio.c():                                                        |           0              |         184              |
+../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c():      |       15392              |         516              |
+..\hwconf\hw_custom.c():                                                     |           0              |         810  [+240]      |
+../Middlewares/Third_Party/FreeRTOS/Source/list.c():                         |           0              |         138              |
+../Core/Src/main.c():                                                        |           0              |         256              |
+..\motor\mc_interface.c():                                                   |       21172  [+16]       |       31036  [+4714]     |
+..\motor\mcpwm.c():                                                          |        2368              |        1568  [+64]       |
+..\motor\mcpwm_foc.c():                                                      |        1028              |       14975  [+288]      |
+..\util\mempools.c():                                                        |        8840              |         140              |
+..\comm\packet.c():                                                          |           0              |           0              |
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c():  |          12              |         798              |
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c():                        |          64              |        2474              |
+../Core/Src/spi.c():                                                         |         100              |         180              |
+startup_stm32g474xx.s():                                                     |        1024              |         508              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c():                       |          12              |          70              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c():                   |           0              |        2234              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c():                |           0              |         756              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c():                |           0              |         158              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c():                   |           0              |         906              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c():                 |          32              |         432              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c():              |           0              |         852              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c():                  |           0              |         628              |
+../Core/Src/stm32g4xx_hal_msp.c():                                           |           0              |          60              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd.c():                   |           0              |        2976              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pcd_ex.c():                |           0              |          96              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c():                |           0              |         204              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c():                   |           0              |        1748              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c():                |           0              |         768              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c():                   |           0              |        1340              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c():                   |           0              |        3966              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c():                |           0              |         904              |
+../Core/Src/stm32g4xx_hal_timebase_tim.c():                                  |          76              |         136              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c():                  |           0              |        2216              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c():               |           0              |         304              |
+../Core/Src/stm32g4xx_it.c():                                                |           0              |         240              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c():                    |           0              |        2346              |
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c():                |           0              |           0              |
+../Core/Src/system_stm32g4xx.c():                                            |           4              |          44              |
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4144              |
+..\comm\terminal.c():                                                        |        2548  [NEW]       |         168  [NEW]       |
+../Core/Src/tim.c():                                                         |         228              |         716              |
+..\driver\timer.c():                                                         |          96              |         849              |
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c():                       |         300              |         992              |
+../Core/Src/usart.c():                                                       |         340              |         348              |
+..\comm\usart_vofa.c():                                                      |        1284              |         160              |
+../USB_Device/App/usb_device.c():                                            |         720              |          84              |
+../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c():       |         271              |        1073              |
+../USB_Device/App/usbd_cdc_if.c():                                           |        4116              |         152              |
+../USB_Device/Target/usbd_conf.c():                                          |        1276              |         684              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c():           |           0              |         652              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c():         |           1              |        1265              |
+../USB_Device/App/usbd_desc.c():                                             |         594              |         370              |
+../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c():          |           0              |         132              |
+..\util\utils_math.c():                                                      |           0              |        2016              |
+..\util\utils_sys.c():                                                       |           4              |         100              |
+------------------------------------------------------------------------------------------------------------------------------------
+[memory print mode]: 0
+LR_IROM1
+        RAM 1             [0x20000000 | 0x00020000 (131072)]
+                [zi start] 8   [zi end] 26
+                RW_IRAM1  [0x20000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ________________________| (  68.5 KB / 128.0 KB )  53.6%  [+2568]
+ 
+        FLASH 1           [0x08000000 | 0x00080000 (524288)]
+                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_________________________________________| ( 100.5 KB / 512.0 KB )  19.6%  [+8460]
+ 
+[htm file path] D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM\G474RET6_Demo.htm
+Maximum Stack Usage =        528 bytes + Unknown(Cycles, Untraceable Function Pointers)
+ 
+=============================================================================================================================
+
+run time: 0.364 s

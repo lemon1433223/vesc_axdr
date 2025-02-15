@@ -1,0 +1,84 @@
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+       984          0          0          4        312          0   adc.o
+       640          0        202         20        512          0   app_freertos.o
+       188          0          0          0        780          0   bms.o
+       242          0          0          0          0          0   buffer.o
+      1230          0          0          4       1720          0   cmsis_os2.o
+         0          0          0         16          0          0   comm_usb.o
+      9330          0          0        158       3264          0   conf_general.o
+      1484          0          0          0          0          0   confgenerator.o
+        44          0        512          0          0          0   crc.o
+        92          0          0          0          0          0   dma.o
+      5542          0          0         12          0          0   eeprom_emul.o
+       308          0          0          0          0          0   enc_mt6816.o
+       500          0         51         24          0          0   encoder.o
+         0          0          0         52        132          0   encoder_cfg.o
+         0          0          0          0          0          0   event_groups.o
+       416          0          0          0          0          0   flash_interface.o
+      3708          0          0          0          0          0   foc_math.o
+       184          0          0          0          0          0   gpio.o
+       484          0          0         32      15360          0   heap_4.o
+       810          0          0          0          0          0   hw_custom.o
+       138          0          0          0          0          0   list.o
+       256          0          0          0          0          0   main.o
+     10764          0        204      20068       1104          0   mc_interface.o
+      1324          0         28        216       2152          0   mcpwm.o
+     14858          0         97         20       1008          0   mcpwm_foc.o
+       128          0          0         12       8828          0   mempools.o
+         0          0          0          0          0          0   packet.o
+       786          0          0         12          0          0   port.o
+      2474          0          0          0         64          0   queue.o
+       180          0          0          0        100          0   spi.o
+        36          0        472          0       1024          0   startup_stm32g474xx.o
+        58          0          0         12          0          0   stm32g4xx_hal.o
+      2234          0          0          0          0          0   stm32g4xx_hal_adc.o
+       756          0          0          0          0          0   stm32g4xx_hal_adc_ex.o
+       158          0          0          0          0          0   stm32g4xx_hal_cortex.o
+       906          0          0          0          0          0   stm32g4xx_hal_dma.o
+       400          0          0         32          0          0   stm32g4xx_hal_flash.o
+       852          0          0          0          0          0   stm32g4xx_hal_flash_ex.o
+       628          0          0          0          0          0   stm32g4xx_hal_gpio.o
+        60          0          0          0          0          0   stm32g4xx_hal_msp.o
+      2976          0          0          0          0          0   stm32g4xx_hal_pcd.o
+        96          0          0          0          0          0   stm32g4xx_hal_pcd_ex.o
+       204          0          0          0          0          0   stm32g4xx_hal_pwr_ex.o
+      1748          0          0          0          0          0   stm32g4xx_hal_rcc.o
+       768          0          0          0          0          0   stm32g4xx_hal_rcc_ex.o
+      1340          0          0          0          0          0   stm32g4xx_hal_spi.o
+      3966          0          0          0          0          0   stm32g4xx_hal_tim.o
+       904          0          0          0          0          0   stm32g4xx_hal_tim_ex.o
+       136          0          0          0         76          0   stm32g4xx_hal_timebase_tim.o
+      2192          0         24          0          0          0   stm32g4xx_hal_uart.o
+       288          0         16          0          0          0   stm32g4xx_hal_uart_ex.o
+       240          0          0          0          0          0   stm32g4xx_it.o
+      2346          0          0          0          0          0   stm32g4xx_ll_usb.o
+         0          0          0          0          0          0   stream_buffer.o
+        16          0         24          4          0          0   system_stm32g4xx.o
+      4084          0          0         60       1220          0   tasks.o
+       160          0          0          8       2540          0   terminal.o
+       716          0          0          0        228          0   tim.o
+       596          0        157         96          0          0   timer.o
+       972          0          0         20        280          0   timers.o
+       348          0          0          0        340          0   usart.o
+       156          0          0          4       1280          0   usart_vofa.o
+        84          0          0          0        720          0   usb_device.o
+       802          0          0        271          0          0   usbd_cdc.o
+       132          0          0         20       4096          0   usbd_cdc_if.o
+       684          0          0          0       1276          0   usbd_conf.o
+       652          0          0          0          0          0   usbd_core.o
+      1264          0          0          1          0          0   usbd_ctlreq.o
+       288          0          0         82        512          0   usbd_desc.o
+       132          0          0          0          0          0   usbd_ioreq.o
+      1484          0        532          0          0          0   utils_math.o
+        96          0          0          4          0          0   utils_sys.o
+Object Totals
+
+Memory Map of the image
+
+	Load Region LR_IROM1 
+
+		Execution Region ER_IROM1 (Exec base: 0x08000000, Size: 0x0001923C, Max: 0x00080000, END)
+
+		Execution Region RW_IRAM1 (Exec base: 0x20000000, Size: 0x00011240, Max: 0x00020000, END)
+
+Image component sizes
