@@ -73,6 +73,8 @@
 ".\eeprom_emul.o"
 ".\flash_interface.o"
 ".\bms.o"
+".\display.o"
+".\lcd.o"
 ".\conf_custom.o"
 ".\confgenerator.o"
 ".\conf_general.o"

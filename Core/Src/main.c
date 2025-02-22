@@ -115,6 +115,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_ADC2_Init();
   MX_SPI1_Init();
+  MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
 	timer_init();//TIM5≥ı ºªØ
 

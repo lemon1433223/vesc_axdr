@@ -340,7 +340,7 @@
               <MiscControls>--diag_suppress=188</MiscControls>
               <Define>USE_HAL_DRIVER,STM32G474xx,USE_FULL_LL_DRIVER,ARM_MATH_CM4</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../USB_Device/App;../USB_Device/Target;../Drivers/STM32G4xx_HAL_Driver/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32G4xx/Include;../Drivers/CMSIS/Include;../motor;../util;../comm;../hwconf;../encoder;../driver;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../conf_custom;../Middlewares/ST/ARM/DSP/Inc;..\driver\EEPROM_Emul</IncludePath>
+              <IncludePath>../Core/Inc;../USB_Device/App;../USB_Device/Target;../Drivers/STM32G4xx_HAL_Driver/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32G4xx/Include;../Drivers/CMSIS/Include;../motor;../util;../comm;../hwconf;../encoder;../driver;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../conf_custom;../Middlewares/ST/ARM/DSP/Inc;..\driver\EEPROM_Emul;..\driver\LCD</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1292,6 +1292,16 @@
               <FileName>bms.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\driver\bms.c</FilePath>
+            </File>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\LCD\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\driver\LCD\lcd.c</FilePath>
             </File>
           </Files>
         </Group>

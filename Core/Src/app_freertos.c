@@ -39,6 +39,7 @@
 #include "commands.h"
 #include "comm_usb.h"
 #include "mempools.h"
+#include "lcd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,14 +60,14 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 uint8_t pcWriteBuffer[512];
-osThreadId_t osTaskManagerID;
+osThreadId_t osTaskManagerId;
 const osThreadAttr_t osTaskManager_attributes = {
   .name = "osTaskManager",
   .priority = (osPriority_t) osPriorityNormal + 3,
   .stack_size = 128 * 4
 };
 
-osThreadId_t printTaskInfoID;
+osThreadId_t printTaskInfoId;
 const osThreadAttr_t task_info_attributes = {
   .name = "printfTaskInfo",
   .priority = (osPriority_t) osPriorityNormal + 1,
@@ -76,12 +77,18 @@ const osThreadAttr_t task_info_attributes = {
 osThreadId_t confgeneralTaskId;
 const osThreadAttr_t confgeneralTask_attributes = {
   .name = "confgeneralTask",
-  .priority = (osPriority_t) osPriorityNormal + 2,
+  .priority = (osPriority_t) osPriorityNormal + 4,
   .stack_size = 256 * 4
 };
 
+osThreadId_t displayTaskId;
+const osThreadAttr_t displayTask_attributes = {
+  .name = "displayTask",
+  .priority = (osPriority_t) osPriorityNormal + 2,
+  .stack_size = 256 * 4
+};
 uint16_t adc_input = 0;
-
+uint32_t LCD_PAGE = 0;
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
@@ -96,7 +103,8 @@ const osThreadAttr_t defaultTask_attributes = {
 void printTaskInfo(osThreadId_t taskId);
 void confgeneralTask(void *argument);
 void managerTask(void *argument);
-
+void displayTask(void *argument);
+void LCD_ShowFloatS(uint16_t x,uint16_t y,float num,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode);
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -150,9 +158,10 @@ void MX_FREERTOS_Init(void) {
 //	mempools_init();
 	conf_general_init();
 	mc_interface_init();
-	osTaskManagerID  	= osThreadNew(managerTask, NULL, &osTaskManager_attributes);
+	osTaskManagerId  	= osThreadNew(managerTask, NULL, &osTaskManager_attributes);
 	confgeneralTaskId = osThreadNew(confgeneralTask, NULL, &confgeneralTask_attributes);
-	printTaskInfoID 	= osThreadNew(printTaskInfo, NULL, &task_info_attributes);
+	printTaskInfoId 	= osThreadNew(printTaskInfo, NULL, &task_info_attributes);
+	displayTaskId 		= osThreadNew(displayTask, NULL, &displayTask_attributes);
 //	commands_init();
 //	comm_usb_init();
   /* USER CODE END RTOS_THREADS */
@@ -264,6 +273,100 @@ void printTaskInfo(void *argument)
 
 }
 
+void displayTask(void *argument)
+{
+	LCD_Init();//LCD³õÊ¼»¯
+	LCD_Fill(0,0,LCD_W,LCD_H,BLACK);	
+
+	uint32_t old_flag = 0;
+	for(;;)
+	{
+		if(old_flag != LCD_PAGE)
+		{
+			LCD_Fill(0,0,LCD_W,LCD_H,BLACK);		
+		}
+		
+		old_flag = LCD_PAGE;
+		
+		switch(LCD_PAGE)
+		{
+			case 1:
+			{	
+
+				LCD_ShowString(10, 5,(uint8_t *)"[MOTOR]", GREEN, BLACK, 32, 0);
+				
+				LCD_DrawLine(10, 60, 10, 135, WHITE);
+				LCD_DrawLine(230, 60, 230, 135, WHITE);
+				
+				LCD_ShowString(20, 60, (uint8_t *)"R       :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 80, (uint8_t *)"L       :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 100,(uint8_t *)"linkage :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 120,(uint8_t *)"gamama  :", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowFloatS(100, 60, m_motor_1.m_conf->foc_motor_r, GREEN, BLACK, 16, 0);
+				LCD_ShowFloatS(100, 80, m_motor_1.m_conf->foc_motor_l, GREEN, BLACK, 16, 0);
+				LCD_ShowFloatS(100, 100, m_motor_1.m_conf->foc_motor_flux_linkage, GREEN, BLACK, 16, 0);
+				LCD_ShowFloatS(100, 120, m_motor_1.m_conf->foc_observer_gain, GREEN, BLACK, 16, 0);
+				break;
+				
+				break;
+			}
+			default:
+				if(m_motor_1.m_state == MC_STATE_OFF)
+				{
+					LCD_ShowString(10, 5,(uint8_t *)"[READY]", GREEN, BLACK, 32, 0);
+				}else
+				{
+					LCD_ShowString(10, 5,(uint8_t *)"[ RUN ]", GREEN, BLACK, 32, 0);
+				}
+				
+				LCD_ShowString(130, 5,(uint8_t *)"Vbus:", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum1(170, 5, m_motor_1.m_motor_state.v_bus, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(220, 5, (uint8_t *)"V", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowString(130, 21,(uint8_t *)"Ibus:", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum1(170, 21, m_motor_1.m_motor_state.i_bus, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(220, 21, (uint8_t *)"A", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowString(130, 37,(uint8_t *)"Tmos:", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum1(170, 37, 00.00, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(220, 37, (uint8_t *)"C", WHITE, BLACK, 16, 0);
+				
+				LCD_DrawLine(10, 60, 10, 135, WHITE);
+				LCD_DrawLine(230, 60, 230, 135, WHITE);
+				
+				LCD_ShowString(20, 40, (uint8_t *)"Mode :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 60, (uint8_t *)"Id.  :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 80, (uint8_t *)"Iq.  :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 100,(uint8_t *)"Duty :", WHITE, BLACK, 16, 0);
+				LCD_ShowString(20, 120,(uint8_t *)"Erpm :", WHITE, BLACK, 16, 0);
+
+				LCD_ShowString(76, 40, (uint8_t *)"[Duty]", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowFloatNum(68, 60, m_motor_1.m_motor_state.id_target, 3, 2, BRRED, BLACK, 16);
+				LCD_ShowString(124, 60, (uint8_t *)"->", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum(140, 60, m_motor_1.m_motor_state.id, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(196, 60, (uint8_t *)"A", WHITE, BLACK, 16, 0);
+
+				LCD_ShowFloatNum(68, 80, m_motor_1.m_motor_state.iq_target, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(124, 80, (uint8_t *)"->", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum(140, 80,m_motor_1.m_motor_state.iq, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(196, 80, (uint8_t *)"A", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowFloatNum(68, 100, m_motor_1.m_duty_cycle_set * 100, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(124, 100, (uint8_t *)"->", WHITE, BLACK, 16, 0);
+				LCD_ShowFloatNum(140, 100, m_motor_1.m_motor_state.duty_now * 100, 3, 2, GREEN, BLACK, 16);
+				LCD_ShowString(196, 100, (uint8_t *)"%", WHITE, BLACK, 16, 0);
+				
+				LCD_ShowFloatS(70, 120, m_motor_1.m_pll_speed, GREEN, BLACK, 16, 0);
+				LCD_ShowString(196, 120, (uint8_t *)"r/s", WHITE, BLACK, 16, 0);
+				break;
+		}
+		
+		osDelay(10);
+	}
+	
+}
 void managerTask(void *argument)
 {
 
@@ -293,6 +396,14 @@ void confgeneralTask(void *argument)
 		conf_general_detect_apply_all_foc(10.0f,true,false);
 		osDelay(10);
 	}
+}
+
+
+void LCD_ShowFloatS(uint16_t x,uint16_t y,float num,uint16_t fc,uint16_t bc,uint8_t sizey,uint8_t mode)
+{
+	uint8_t len,temp[10];
+  len=sprintf((char *)temp,"%f",num);
+	LCD_ShowString(x,y,temp,fc,bc,sizey,mode);
 }
 /* USER CODE END Application */
 

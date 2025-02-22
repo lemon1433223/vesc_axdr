@@ -148,11 +148,20 @@ void timer_reinit(int f_zv) {
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-
 	switch(GPIO_Pin)
 	{
+		case KEY1_Pin:
+			if(LCD_PAGE==0)
+			{
+				LCD_PAGE = 1;
+			}else
+			{
+				LCD_PAGE = 0;
+			}
+
+			break;
 		case KEY2_Pin:
-			osThreadFlagsSet(printTaskInfoID,0x01);
+			osThreadFlagsSet(printTaskInfoId,0x01);
 		break;
 		case KEY3_Pin:
 			osThreadFlagsSet(confgeneralTaskId,0x01);
@@ -161,11 +170,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			
 			if(m_motor_1.m_state == MC_STATE_RUNNING)
 			{
-				osThreadFlagsSet(osTaskManagerID,0x02);
+				osThreadFlagsSet(osTaskManagerId,0x02);
 				mcpwm_foc_stop_pwm(false);
 			}else
 			{
-				osThreadFlagsSet(osTaskManagerID,0x01);
+				osThreadFlagsSet(osTaskManagerId,0x01);
 				m_motor_1.m_state = MC_STATE_RUNNING;
 			}
 			break;

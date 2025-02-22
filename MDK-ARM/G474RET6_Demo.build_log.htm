@@ -21,26 +21,22 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\Embedded\VESC_Axdr\G474RET6_Demo_v0.1.6\MDK-ARM\G474RET6_Demo.uvprojx
+D:\Embedded\VESC_Axdr\G474RET6_Demo\MDK-ARM\G474RET6_Demo.uvprojx
 Project File Date:  02/15/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil\ARM\ARM_Compiler_5.06u7\Bin'
 Build target 'G474RET6_Demo'
-compiling mc_interface.c...
-..\motor\mc_interface.c(1598): warning:  #546-D: transfer of control bypasses initialization of:
-            variable "batt_left"  (declared at line 1602)
-  	switch (conf->si_battery_type) {
-  	^
-..\motor\mc_interface.c(2728): warning:  #177-D: function "update_stats"  was declared but never referenced
-  static void update_stats(volatile motor_if_state_t *motor) {
-..\motor\mc_interface.c(173): warning:  #550-D: variable "timer_thread_id"  was set but never used
-  static osThreadId_t timer_thread_id;
-..\motor\mc_interface.c(194): warning:  #550-D: variable "stat_thread_id"  was set but never used
-  static osThreadId_t stat_thread_id;
-..\motor\mc_interface.c: 4 warnings, 0 errors
+compiling app_freertos.c...
+../Core/Src/app_freertos.c(185): warning:  #223-D: function "MX_USB_Device_Init" declared implicitly
+    MX_USB_Device_Init();
+../Core/Src/app_freertos.c(312): warning:  #111-D: statement is unreachable
+  				break;
+../Core/Src/app_freertos.c(404): warning:  #550-D: variable "len"  was set but never used
+  	uint8_t len,temp[10];
+../Core/Src/app_freertos.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=100228 RO-data=2744 RW-data=21276 ZI-data=48932  
+Program Size: Code=103856 RO-data=17412 RW-data=21284 ZI-data=49036  
 FromELF: creating hex file...
 After Build - User command #1: keil-build-viewer.exe
 =================================================== keil-build-viewer v1.6 ==================================================
@@ -51,10 +47,10 @@ After Build - User command #1: keil-build-viewer.exe
                                    FILE(s)                                   |         RAM (byte)       |       FLASH (byte)       |
 ------------------------------------------------------------------------------------------------------------------------------------
 ../Core/Src/adc.c():                                                         |         316              |         988              |
-../Core/Src/app_freertos.c():                                                |         532              |         862              |
+../Core/Src/app_freertos.c():                                                |         540              |        2158              |
 ..\driver\bms.c():                                                           |         780              |         188              |
-..\util\buffer.c():                                                          |           0  [NEW]       |         242  [NEW]       |
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1234  [+6]        |
+..\util\buffer.c():                                                          |           0              |         242              |
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1234              |
 ..\comm\comm_usb.c():                                                        |          16              |          16              |
 ..\conf_custom\conf_general.c():                                             |        3422              |        9488              |
 ..\conf_custom\confgenerator.c():                                            |           0              |        1484              |
@@ -62,26 +58,27 @@ After Build - User command #1: keil-build-viewer.exe
 ../Core/Src/dma.c():                                                         |           0              |          92              |
 ..\driver\EEPROM_Emul\eeprom_emul.c():                                       |          12              |        5554              |
 ..\encoder\enc_mt6816.c():                                                   |           0              |         308              |
-..\encoder\encoder.c():                                                      |          24              |         575  [+104]      |
+..\encoder\encoder.c():                                                      |          24              |         575              |
 ..\encoder\encoder_cfg.c():                                                  |         184              |          52              |
 ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c():                 |           0              |           0              |
 ..\driver\EEPROM_Emul\flash_interface.c():                                   |           0              |         416              |
 ..\motor\foc_math.c():                                                       |           0              |        3708              |
-../Core/Src/gpio.c():                                                        |           0              |         184              |
+../Core/Src/gpio.c():                                                        |           0              |         292              |
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c():      |       15392              |         516              |
-..\hwconf\hw_custom.c():                                                     |           0              |         810  [+240]      |
+..\hwconf\hw_custom.c():                                                     |           0              |         838              |
+..\driver\LCD\lcd.c():                                                       |           0              |       16278              |
 ../Middlewares/Third_Party/FreeRTOS/Source/list.c():                         |           0              |         138              |
-../Core/Src/main.c():                                                        |           0              |         256              |
-..\motor\mc_interface.c():                                                   |       21172  [+16]       |       31036  [+4714]     |
-..\motor\mcpwm.c():                                                          |        2368              |        1568  [+64]       |
-..\motor\mcpwm_foc.c():                                                      |        1028              |       14975  [+288]      |
+../Core/Src/main.c():                                                        |           0              |         260              |
+..\motor\mc_interface.c():                                                   |       21172              |       31036              |
+..\motor\mcpwm.c():                                                          |        2368              |        1568              |
+..\motor\mcpwm_foc.c():                                                      |        1028              |       14975              |
 ..\util\mempools.c():                                                        |        8840              |         140              |
 ..\comm\packet.c():                                                          |           0              |           0              |
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c():  |          12              |         798              |
 ../Middlewares/Third_Party/FreeRTOS/Source/queue.c():                        |          64              |        2474              |
-../Core/Src/spi.c():                                                         |         100              |         180              |
+../Core/Src/spi.c():                                                         |         200              |         328              |
 startup_stm32g474xx.s():                                                     |        1024              |         508              |
-../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c():                       |          12              |          70              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c():                       |          12              |         106              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c():                   |           0              |        2234              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c():                |           0              |         756              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c():                |           0              |         158              |
@@ -95,7 +92,7 @@ startup_stm32g474xx.s():                                                     |  
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c():                |           0              |         204              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c():                   |           0              |        1748              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c():                |           0              |         768              |
-../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c():                   |           0              |        1340              |
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c():                   |           0              |        1738              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c():                   |           0              |        3966              |
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c():                |           0              |         904              |
 ../Core/Src/stm32g4xx_hal_timebase_tim.c():                                  |          76              |         136              |
@@ -106,7 +103,7 @@ startup_stm32g474xx.s():                                                     |  
 ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c():                |           0              |           0              |
 ../Core/Src/system_stm32g4xx.c():                                            |           4              |          44              |
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4144              |
-..\comm\terminal.c():                                                        |        2548  [NEW]       |         168  [NEW]       |
+..\comm\terminal.c():                                                        |        2548              |         168              |
 ../Core/Src/tim.c():                                                         |         228              |         716              |
 ..\driver\timer.c():                                                         |          96              |         849              |
 ../Middlewares/Third_Party/FreeRTOS/Source/timers.c():                       |         300              |         992              |
@@ -125,15 +122,15 @@ startup_stm32g474xx.s():                                                     |  
 ------------------------------------------------------------------------------------------------------------------------------------
 LR_IROM1
         RAM 1             [0x20000000 | 0x00020000 (131072)]
-                RW_IRAM1  [0x20000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ________________________| (  68.5 KB / 128.0 KB )  53.6%  [+2568]
+                RW_IRAM1  [0x20000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ________________________| (  68.6 KB / 128.0 KB )  53.6%  
  
         FLASH 1           [0x08000000 | 0x00080000 (524288)]
-                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_________________________________________| ( 100.5 KB / 512.0 KB )  19.6%  [+8460]
+                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_______________________________________| ( 118.4 KB / 512.0 KB )  23.1%  
  
 Maximum Stack Usage =        528 bytes + Unknown(Cycles, Untraceable Function Pointers)
  
 =============================================================================================================================
-".\G474RET6_Demo.axf" - 0 Error(s), 4 Warning(s).
+".\G474RET6_Demo.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
