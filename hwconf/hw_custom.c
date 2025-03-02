@@ -176,6 +176,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			{
 				osThreadFlagsSet(osTaskManagerId,0x01);
 				m_motor_1.m_state = MC_STATE_RUNNING;
+//				mcpwm_foc_set_openloop_duty(0.2f,3000.0f);
 			}
 			break;
 	}
