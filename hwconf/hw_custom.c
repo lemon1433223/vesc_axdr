@@ -170,11 +170,9 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			
 			if(m_motor_1.m_state == MC_STATE_RUNNING)
 			{
-				osThreadFlagsSet(osTaskManagerId,0x02);
 				mcpwm_foc_stop_pwm(false);
 			}else
 			{
-				osThreadFlagsSet(osTaskManagerId,0x01);
 				m_motor_1.m_state = MC_STATE_RUNNING;
 //				mcpwm_foc_set_openloop_duty(0.2f,3000.0f);
 			}

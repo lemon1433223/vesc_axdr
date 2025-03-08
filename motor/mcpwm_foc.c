@@ -37,7 +37,7 @@ static void update_valpha_vbeta(motor_all_state_t *motor, float mod_alpha, float
 static void stop_pwm_hw(motor_all_state_t *motor);
 static void start_pwm_hw(motor_all_state_t *motor);
 static void full_brake_hw(motor_all_state_t *motor);
-// static void terminal_plot_hfi(int argc, const char **argv);
+static void terminal_plot_hfi(int argc, const char **argv);
 static void timer_update(motor_all_state_t *motor, float dt);
 static void hfi_update(volatile motor_all_state_t *motor, float dt);
 
@@ -206,12 +206,13 @@ void mcpwm_foc_init(mc_configuration *conf_m1, mc_configuration *conf_m2) {
 	init_audio_state(&m_motor_2.m_audio);
 #endif
 
-	timer_reinit(m_motor_1.m_conf->foc_f_zv);
+	timer_reinit((int)m_motor_1.m_conf->foc_f_zv);
 
 	stop_pwm_hw((motor_all_state_t*)&m_motor_1);
 #ifdef HW_HAS_DUAL_MOTORS
 	stop_pwm_hw((motor_all_state_t*)&m_motor_2);
 #endif
+
 	utils_sys_unlock_cnt();
 
 	CURRENT_FILTER_ON();
@@ -222,7 +223,6 @@ void mcpwm_foc_init(mc_configuration *conf_m1, mc_configuration *conf_m2) {
 	m_dccal_done = true;
 #else
 	if (m_motor_1.m_conf->foc_offsets_cal_mode & (1 << 0)) {
-		
 		systime_t cal_start_time = osKernelGetSysTimerCount();
 		float cal_start_timeout = 10.0;
 
@@ -302,7 +302,7 @@ void mcpwm_foc_init(mc_configuration *conf_m1, mc_configuration *conf_m2) {
 	// Start threads
 	pid_thread_id = osThreadNew(pid_thread, NULL, &pid_thread_attributes);
 	timer_thread_id = osThreadNew(timer_thread, NULL, &timer_thread_attributes);
-	
+
 	m_init_done = true;
 }
 

@@ -370,7 +370,7 @@ void foc_svm(float alpha, float beta, float max_mod, uint32_t PWMFullDutyCycle,
 	}
 	}
 
-	int t_max = PWMFullDutyCycle * (1.0 - (1.0 - max_mod) * 0.5);
+	int t_max = PWMFullDutyCycle * (1.0f - (1.0f - max_mod) * 0.5f);
 	utils_truncate_number_int(&tA, 0, t_max);
 	utils_truncate_number_int(&tB, 0, t_max);
 	utils_truncate_number_int(&tC, 0, t_max);

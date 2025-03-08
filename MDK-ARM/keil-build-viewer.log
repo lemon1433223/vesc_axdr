@@ -34,10 +34,10 @@
 
 [region info]
 [load region] LR_IROM1
-	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x0001D9B4 [memory type] 2 [memory ID] 3
+	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x0001D844 [memory type] 2 [memory ID] 3
 
-	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x000112B0 [memory type] 1 [memory ID] 2
-		[ZI block] addr: 0x20005324, size: 0x0000BF8C (49036)
+	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x000112A8 [memory type] 1 [memory ID] 2
+		[ZI block] addr: 0x20005320, size: 0x0000BF88 (49032)
 
 
 [object name max length] 29
@@ -212,16 +212,16 @@
 
 [record region info]
 [load region] LR_IROM1
-	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x0001D9B4 [type] 2 [ID] 3
-	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x000112B0 [type] 1 [ID] 2
+	[execution region] ER_IROM1, 0x08000000, 0x00080000, 0x0001D844 [type] 2 [ID] 3
+	[execution region] RW_IRAM1, 0x20000000, 0x00020000, 0x000112A8 [type] 1 [ID] 2
 ------------------------------------------------------------------------------------------------------------------------------------
                                    FILE(s)                                   |         RAM (byte)       |       FLASH (byte)       |
 ------------------------------------------------------------------------------------------------------------------------------------
 ../Core/Src/adc.c():                                                         |         316              |         988              |
-../Core/Src/app_freertos.c():                                                |         540              |        2158              |
+../Core/Src/app_freertos.c():                                                |         536              |        2045              |
 ..\driver\bms.c():                                                           |         780              |         188              |
 ..\util\buffer.c():                                                          |           0              |         242              |
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1234              |
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1112              |
 ..\comm\comm_usb.c():                                                        |          16              |          16              |
 ..\conf_custom\conf_general.c():                                             |        3422              |        9488              |
 ..\conf_custom\confgenerator.c():                                            |           0              |        1484              |
@@ -233,10 +233,10 @@
 ..\encoder\encoder_cfg.c():                                                  |         184              |          52              |
 ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c():                 |           0              |           0              |
 ..\driver\EEPROM_Emul\flash_interface.c():                                   |           0              |         416              |
-..\motor\foc_math.c():                                                       |           0              |        3708              |
+..\motor\foc_math.c():                                                       |           0              |        3648              |
 ../Core/Src/gpio.c():                                                        |           0              |         292              |
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c():      |       15392              |         516              |
-..\hwconf\hw_custom.c():                                                     |           0              |         838              |
+..\hwconf\hw_custom.c():                                                     |           0              |         806              |
 ..\driver\LCD\lcd.c():                                                       |           0              |       16278              |
 ../Middlewares/Third_Party/FreeRTOS/Source/list.c():                         |           0              |         138              |
 ../Core/Src/main.c():                                                        |           0              |         260              |
@@ -273,7 +273,7 @@ startup_stm32g474xx.s():                                                     |  
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c():                    |           0              |        2346              |
 ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c():                |           0              |           0              |
 ../Core/Src/system_stm32g4xx.c():                                            |           4              |          44              |
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4144              |
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4132              |
 ..\comm\terminal.c():                                                        |        2548              |         168              |
 ../Core/Src/tim.c():                                                         |         228              |         716              |
 ..\driver\timer.c():                                                         |          96              |         849              |
@@ -298,11 +298,11 @@ LR_IROM1
                 RW_IRAM1  [0x20000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ________________________| (  68.6 KB / 128.0 KB )  53.6%  
  
         FLASH 1           [0x08000000 | 0x00080000 (524288)]
-                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_______________________________________| ( 118.4 KB / 512.0 KB )  23.1%  
+                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_______________________________________| ( 118.0 KB / 512.0 KB )  23.1%  
  
 [htm file path] D:\Embedded\VESC_Axdr\G474RET6_Demo\MDK-ARM\G474RET6_Demo.htm
 Maximum Stack Usage =        528 bytes + Unknown(Cycles, Untraceable Function Pointers)
  
 =============================================================================================================================
 
-run time: 0.485 s
+run time: 0.454 s

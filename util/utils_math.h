@@ -25,7 +25,7 @@
 #include <math.h>
 //ĞŞ¸ÄÄÚÈİ
 #ifndef M_PI
-#define M_PI 3.14159265358979323846f
+#define M_PI 3.14159265358f
 #endif
 /*********/
 float utils_map_angle(float angle, float min, float max);

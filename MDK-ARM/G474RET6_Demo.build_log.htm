@@ -27,6 +27,21 @@ Project File Date:  03/01/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\Bin'
 Build target 'G474RET6_Demo'
+compiling app_freertos.c...
+../Core/Src/app_freertos.c(67): warning:  #188-D: enumerated type mixed with another type
+    .priority = (osPriority_t) osPriorityNormal + 1,
+../Core/Src/app_freertos.c(74): warning:  #188-D: enumerated type mixed with another type
+    .priority = (osPriority_t) osPriorityNormal + 4,
+../Core/Src/app_freertos.c(178): warning:  #223-D: function "MX_USB_Device_Init" declared implicitly
+    MX_USB_Device_Init();
+../Core/Src/app_freertos.c(305): warning:  #111-D: statement is unreachable
+  				break;
+../Core/Src/app_freertos.c(379): warning:  #550-D: variable "len"  was set but never used
+  	uint8_t len,temp[10];
+../Core/Src/app_freertos.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=103540 RO-data=17360 RW-data=21280 ZI-data=49032  
+FromELF: creating hex file...
 After Build - User command #1: keil-build-viewer.exe
 =================================================== keil-build-viewer v1.6 ==================================================
  
@@ -36,10 +51,10 @@ After Build - User command #1: keil-build-viewer.exe
                                    FILE(s)                                   |         RAM (byte)       |       FLASH (byte)       |
 ------------------------------------------------------------------------------------------------------------------------------------
 ../Core/Src/adc.c():                                                         |         316              |         988              |
-../Core/Src/app_freertos.c():                                                |         540              |        2158              |
+../Core/Src/app_freertos.c():                                                |         536              |        2045              |
 ..\driver\bms.c():                                                           |         780              |         188              |
 ..\util\buffer.c():                                                          |           0              |         242              |
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1234              |
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c():      |        1724              |        1112              |
 ..\comm\comm_usb.c():                                                        |          16              |          16              |
 ..\conf_custom\conf_general.c():                                             |        3422              |        9488              |
 ..\conf_custom\confgenerator.c():                                            |           0              |        1484              |
@@ -51,10 +66,10 @@ After Build - User command #1: keil-build-viewer.exe
 ..\encoder\encoder_cfg.c():                                                  |         184              |          52              |
 ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c():                 |           0              |           0              |
 ..\driver\EEPROM_Emul\flash_interface.c():                                   |           0              |         416              |
-..\motor\foc_math.c():                                                       |           0              |        3708              |
+..\motor\foc_math.c():                                                       |           0              |        3648              |
 ../Core/Src/gpio.c():                                                        |           0              |         292              |
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c():      |       15392              |         516              |
-..\hwconf\hw_custom.c():                                                     |           0              |         838              |
+..\hwconf\hw_custom.c():                                                     |           0              |         806              |
 ..\driver\LCD\lcd.c():                                                       |           0              |       16278              |
 ../Middlewares/Third_Party/FreeRTOS/Source/list.c():                         |           0              |         138              |
 ../Core/Src/main.c():                                                        |           0              |         260              |
@@ -91,7 +106,7 @@ startup_stm32g474xx.s():                                                     |  
 ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c():                    |           0              |        2346              |
 ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c():                |           0              |           0              |
 ../Core/Src/system_stm32g4xx.c():                                            |           4              |          44              |
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4144              |
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c():                        |        1280              |        4132              |
 ..\comm\terminal.c():                                                        |        2548              |         168              |
 ../Core/Src/tim.c():                                                         |         228              |         716              |
 ..\driver\timer.c():                                                         |          96              |         849              |
@@ -114,12 +129,12 @@ LR_IROM1
                 RW_IRAM1  [0x20000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ¡õ________________________| (  68.6 KB / 128.0 KB )  53.6%  
  
         FLASH 1           [0x08000000 | 0x00080000 (524288)]
-                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_______________________________________| ( 118.4 KB / 512.0 KB )  23.1%  
+                ER_IROM1  [0x08000000]|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_______________________________________| ( 118.0 KB / 512.0 KB )  23.1%  
  
 Maximum Stack Usage =        528 bytes + Unknown(Cycles, Untraceable Function Pointers)
  
 =============================================================================================================================
-".\G474RET6_Demo.axf" - 0 Error(s), 0 Warning(s).
+".\G474RET6_Demo.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -142,7 +157,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

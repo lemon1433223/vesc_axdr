@@ -77,7 +77,7 @@ I (../encoder/enc_mt6816.h)(0x678614FB)
 I (../encoder/encoder_datatype.h)(0x678605A3)
 I (../driver/spi_bb.h)(0x67860124)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x671EDD87)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../driver/timer.h)(0x6787074B)
 I (../motor/mc_interface.h)(0x6774E4D4)
@@ -132,7 +132,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x671EDD87)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x671EDD87)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x671EDD87)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x671EDD87)
-F (../Core/Src/app_freertos.c)(0x67C3ED4C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\app_freertos.o --omf_browse .\app_freertos.crf --depend .\app_freertos.d)
+F (../Core/Src/app_freertos.c)(0x67CC1469)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\app_freertos.o --omf_browse .\app_freertos.crf --depend .\app_freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x671EDD7D)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stddef.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2)
@@ -196,7 +196,7 @@ I (../encoder/encoder_datatype.h)(0x678605A3)
 I (../driver/spi_bb.h)(0x67860124)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h)(0x671EDD87)
 I (../Core/Inc/spi.h)(0x67B08FF4)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../driver/timer.h)(0x6787074B)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdio.h)(0x5E8E3CC2)
@@ -2191,7 +2191,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x671EDD87)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x671EDD87)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x671EDD7D)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x671EDD7D)
-F (..\motor\mcpwm_foc.c)(0x67B01752)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\mcpwm_foc.o --omf_browse .\mcpwm_foc.crf --depend .\mcpwm_foc.d)
+F (..\motor\mcpwm_foc.c)(0x67CC0FFA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\mcpwm_foc.o --omf_browse .\mcpwm_foc.crf --depend .\mcpwm_foc.d)
 I (..\motor\mcpwm_foc.h)(0x6787220F)
 I (..\motor\foc_math.h)(0x67A83538)
 I (..\motor\datatypes.h)(0x67A83504)
@@ -2240,7 +2240,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x671EDD87)
 I (../hwconf/hw_custom.h)(0x67A74EE8)
 I (../util/utils.h)(0x671F4016)
 I (../util/utils_sys.h)(0x6774F3D6)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../driver/timer.h)(0x6787074B)
 I (..\motor\mcconf_default.h)(0x67A836A7)
@@ -2268,12 +2268,12 @@ I (../encoder/encoder.h)(0x678618A3)
 I (../comm/commands.h)(0x6785CABC)
 I (../conf_custom/conf_general.h)(0x6789F48D)
 I (../Core/Inc/app_freertos.h)(0x67B16699)
-F (..\motor\foc_math.c)(0x67B01E76)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\foc_math.o --omf_browse .\foc_math.crf --depend .\foc_math.d)
+F (..\motor\foc_math.c)(0x67CBFD92)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\foc_math.o --omf_browse .\foc_math.crf --depend .\foc_math.d)
 I (..\motor\foc_math.h)(0x67A83538)
 I (..\motor\datatypes.h)(0x67A83504)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 F (..\motor\mc_interface.c)(0x67B0314A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\mc_interface.o --omf_browse .\mc_interface.crf --depend .\mc_interface.d)
 I (..\motor\mc_interface.h)(0x6774E4D4)
@@ -2326,7 +2326,7 @@ I (../motor/mcconf_default.h)(0x67A836A7)
 I (..\motor\mcpwm_foc.h)(0x6787220F)
 I (..\motor\foc_math.h)(0x67A83538)
 I (../comm/terminal.h)(0x6785CABD)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (../comm/commands.h)(0x6785CABC)
@@ -2409,7 +2409,7 @@ I (../hwconf/hw_custom.h)(0x67A74EE8)
 I (../motor/mcconf_default.h)(0x67A836A7)
 I (..\motor\mc_interface.h)(0x6774E4D4)
 I (../util/digital_filter.h)(0x6785CABD)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (../encoder/encoder.h)(0x678618A3)
 I (../encoder/encoder_datatype.h)(0x678605A3)
@@ -2492,7 +2492,7 @@ I (../Core/Inc/main.h)(0x67B08FF6)
 I (../motor/mc_interface.h)(0x6774E4D4)
 I (../hwconf/hw.h)(0x67A598A0)
 I (../hwconf/hw_custom.h)(0x67A74EE8)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../driver/timer.h)(0x6787074B)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\string.h)(0x5E8E3CC2)
@@ -2561,7 +2561,7 @@ I (../hwconf/hw.h)(0x67A598A0)
 I (../hwconf/hw_custom.h)(0x67A74EE8)
 I (../util/utils.h)(0x671F4016)
 I (../util/utils_sys.h)(0x6774F3D6)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../motor/mcpwm_foc.h)(0x6787220F)
 I (../motor/foc_math.h)(0x67A83538)
@@ -2627,7 +2627,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x671ED
 I (../hwconf/hw.h)(0x67A598A0)
 I (../hwconf/hw_custom.h)(0x67A74EE8)
 F (..\encoder\encoder_datatype.h)(0x678605A3)()
-F (..\hwconf\hw_custom.c)(0x67C3ED4C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\hw_custom.o --omf_browse .\hw_custom.crf --depend .\hw_custom.d)
+F (..\hwconf\hw_custom.c)(0x67CC1369)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\hw_custom.o --omf_browse .\hw_custom.crf --depend .\hw_custom.d)
 I (..\hwconf\hw.h)(0x67A598A0)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x671EDD87)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x671F8BE1)
@@ -2678,7 +2678,7 @@ I (../motor/datatypes.h)(0x67A83504)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
 I (../util/utils.h)(0x671F4016)
 I (../util/utils_sys.h)(0x6774F3D6)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../motor/mc_interface.h)(0x6774E4D4)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x671EDD7D)
@@ -2700,7 +2700,7 @@ I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
 F (..\util\utils_math.c)(0x6787202A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\utils_math.o --omf_browse .\utils_math.crf --depend .\utils_math.d)
-I (..\util\utils_math.h)(0x67872028)
+I (..\util\utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
@@ -2789,7 +2789,7 @@ F (..\util\utils.h)(0x671F4016)()
 F (..\util\digital_filter.c)(0x678621EA)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\digital_filter.o --omf_browse .\digital_filter.crf --depend .\digital_filter.d)
 I (..\util\digital_filter.h)(0x6785CABD)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2)
-I (..\util\utils_math.h)(0x67872028)
+I (..\util\utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 F (..\comm\usart_vofa.c)(0x67AF2A39)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_Device/App -I ../USB_Device/Target -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../motor -I ../util -I ../comm -I ../hwconf -I ../encoder -I ../driver -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../conf_custom -I ../Middlewares/ST/ARM/DSP/Inc -I ..\driver\EEPROM_Emul -I ..\driver\LCD-I.\RTE\_G474RET6_Demo-IC:\Users\ackict\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="541" -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx -DUSE_FULL_LL_DRIVER -DARM_MATH_CM4-o .\usart_vofa.o --omf_browse .\usart_vofa.crf --depend .\usart_vofa.d)
@@ -2904,7 +2904,7 @@ I (../motor/mcpwm_foc.h)(0x6787220F)
 I (../motor/foc_math.h)(0x67A83538)
 I (../motor/mc_interface.h)(0x6774E4D4)
 I (..\comm\commands.h)(0x6785CABC)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (../encoder/encoder.h)(0x678618A3)
@@ -2983,7 +2983,7 @@ I (../conf_custom/conf_general.h)(0x6789F48D)
 I (../motor/mcconf_default.h)(0x67A836A7)
 I (../motor/mcpwm_foc.h)(0x6787220F)
 I (../motor/foc_math.h)(0x67A83538)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (..\comm\packet.h)(0x66D456AF)
@@ -3301,7 +3301,7 @@ I (../motor/datatypes.h)(0x67A83504)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdint.h)(0x5E8E3CC2)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\stdbool.h)(0x5E8E3CC2)
 I (../util/buffer.h)(0x671F4016)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (../comm/commands.h)(0x6785CABC)
@@ -3563,7 +3563,7 @@ I (../motor/mcpwm.h)(0x6785D591)
 I (../motor/mcpwm_foc.h)(0x6787220F)
 I (../motor/foc_math.h)(0x67A83538)
 I (../motor/mc_interface.h)(0x6774E4D4)
-I (../util/utils_math.h)(0x67872028)
+I (../util/utils_math.h)(0x67CBFC9C)
 I (C:\Users\ackict\AppData\Local\Keil_v5\ARM\ARM_CC\include\math.h)(0x5E8E3CC2)
 I (../util/utils_sys.h)(0x6774F3D6)
 I (../comm/commands.h)(0x6785CABC)

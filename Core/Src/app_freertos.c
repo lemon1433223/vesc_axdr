@@ -60,12 +60,6 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 uint8_t pcWriteBuffer[512];
-osThreadId_t osTaskManagerId;
-const osThreadAttr_t osTaskManager_attributes = {
-  .name = "osTaskManager",
-  .priority = (osPriority_t) osPriorityNormal + 3,
-  .stack_size = 128 * 4
-};
 
 osThreadId_t printTaskInfoId;
 const osThreadAttr_t task_info_attributes = {
@@ -84,7 +78,7 @@ const osThreadAttr_t confgeneralTask_attributes = {
 osThreadId_t displayTaskId;
 const osThreadAttr_t displayTask_attributes = {
   .name = "displayTask",
-  .priority = (osPriority_t) osPriorityNormal + 2,
+  .priority = (osPriority_t) osPriorityNormal,
   .stack_size = 256 * 4
 };
 uint16_t adc_input = 0;
@@ -158,7 +152,6 @@ void MX_FREERTOS_Init(void) {
 //	mempools_init();
 	conf_general_init();
 	mc_interface_init();
-	osTaskManagerId  	= osThreadNew(managerTask, NULL, &osTaskManager_attributes);
 	confgeneralTaskId = osThreadNew(confgeneralTask, NULL, &confgeneralTask_attributes);
 	printTaskInfoId 	= osThreadNew(printTaskInfo, NULL, &task_info_attributes);
 	displayTaskId 		= osThreadNew(displayTask, NULL, &displayTask_attributes);
@@ -367,33 +360,15 @@ void displayTask(void *argument)
 	}
 	
 }
-void managerTask(void *argument)
-{
-
-//  MX_USB_Device_Init();
-
-	
-	for(;;){
-		osThreadFlagsWait(0x0f,osFlagsWaitAny|osFlagsNoClear,osWaitForever);
-		uint32_t flag = osThreadFlagsGet();
-		osThreadFlagsClear(flag);
-		if(flag == 0x01)
-		{
-			osThreadResume(defaultTaskHandle);					
-		}else if(flag == 0x02)
-		{
-			osThreadSuspend(defaultTaskHandle);
-		}
-	}
-
-}
 
 void confgeneralTask(void *argument)
 {
 	for(;;)
 	{
 		osThreadFlagsWait(0x01,osFlagsWaitAny,osWaitForever);
+		osThreadSuspend(defaultTaskHandle);
 		conf_general_detect_apply_all_foc(10.0f,true,false);
+		osThreadResume(defaultTaskHandle);
 		osDelay(10);
 	}
 }
